@@ -3098,3 +3098,45 @@ pref("toolkit.contentRelevancy.enabled", false);
 pref("toolkit.contentRelevancy.ingestEnabled", false);
 // Pref to enable extra logging for the content relevancy feature
 pref("toolkit.contentRelevancy.log", false);
+// =========================
+// Smooth + Low RAM + Low CPU
+// =========================
+
+// 🏎️ GPU Acceleration for Smooth UI
+pref("gfx.webrender.all", true);
+pref("layers.acceleration.force-enabled", true);
+pref("layers.omtp.enabled", true);
+
+// 🏎️ Smooth Scrolling & Animations
+pref("general.smoothScroll.msdPhysics.enabled", true);
+pref("mousewheel.default.delta_multiplier_y", 250);
+pref("apz.overscroll.enabled", true);
+pref("apz.frame_delay.enabled", true);
+
+// 🧹 Reduce RAM Usage
+pref("browser.tabs.unloadOnLowMemory", true);
+pref("dom.ipc.processCount", 4);  // Good for 8GB RAM
+pref("image.mem.decode_bytes_at_a_time", 32768);
+
+// 🔇 Disable Telemetry & Bloat
+pref("toolkit.telemetry.enabled", false);
+pref("toolkit.telemetry.unified", false);
+pref("datareporting.healthreport.uploadEnabled", false);
+pref("extensions.pocket.enabled", false);
+pref("breakpad.reportURL", "");
+
+// 🌐 Network Optimization
+pref("network.http.max-connections", 1800);
+pref("network.http.max-persistent-connections-per-server", 10);
+pref("network.prefetch-next", false);
+pref("network.dns.disablePrefetch", true);
+
+// 💤 Lower Background Tab CPU Usage
+pref("dom.min_background_timeout_value", 1000);
+pref("dom.timeout.throttling_delay", 50);
+
+// ⚡ Disable Unused APIs for Performance
+pref("media.peerconnection.enabled", false); // WebRTC off
+pref("device.sensors.enabled", false);
+pref("geo.enabled", false);
+
